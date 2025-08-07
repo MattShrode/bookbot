@@ -6,8 +6,9 @@ def get_book_text(file_path):
     return file_contents
 
 def get_char_count(file_contents):
+    file_contents_lower = file_contents.lower()
     char_count = {}
-    for char in file_contents:
+    for char in file_contents_lower:
         if char in char_count:
             char_count[char] += 1
         else:
