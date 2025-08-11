@@ -12,3 +12,10 @@ def get_char_count(file_contents):
         else:
             char_count[char] = 1
     return char_count
+
+def get_list_of_dict(char_count_dict):
+    list_of_char_count = [{"char": key, "num": value} for key, value in char_count_dict.items()]
+    return list_of_char_count
+
+def sort_on(items):
+    return items["num"]
